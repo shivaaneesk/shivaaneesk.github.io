@@ -1,75 +1,161 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>SK Shivaanee | Portfolio</title>
-  <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SK Shivaanee - Portfolio</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header>
-    <h1>SK Shivaanee</h1>
-    <p>Aspiring SDE | CSE @ SSN | AIR 10 ISC</p>
-    <nav>
-      <a href="#about">About</a>
-      <a href="#projects">Projects</a>
-      <a href="#skills">Skills</a>
-      <a href="#achievements">Achievements</a>
-      <a href="#contact">Contact</a>
-    </nav>
-  </header>
 
-  <main class="grid-container">
-    <section id="about">
-      <h2>About Me</h2>
-      <p>
-        Hello, I'm Shivaanee SK, a fun-loving and inquisitive student of Computer Science at SSN College of Engineering. I have a solid grounding in Java and Python and enjoy creating productive tech — from user-friendly chat tools to AI-based summarizers. I attained an All India Rank 10 in the ISC Board Exams and currently possess a CGPA of 8.4. I'm motivated by a combination of creativity and logic, a penchant for minimal UI and great user experiences. I pride myself on writing neat, effective code and also on continually searching for fresh challenges that enhance my development and problem-solving skills.
-    </section>
+    <header class="container">
+        <nav>
+            <div class="nav-logo">SK Shivaanee</div>
+            <ul class="nav-links">
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#credentials">Credentials</a></li>
+                <li><a class="nav-contact-btn" href="mailto:shivaaneesk@gmail.com">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
 
-    <section id="projects">
-      <h2>Projects</h2>
-      <ul>
-        <li><strong><a href="https://github.com/shivaaneesk/ChefClaude" target="_blank">ChefClaude</a></strong> – AI recipe assistant using Claude API + React</li>
-        <li><strong><a href="https://github.com/shivaaneesk/ChatApp" target="_blank">ChatApp</a></strong> – Secure real-time messaging (Java + MySQL)</li>
-        <li><strong><a href="https://github.com/shivaaneesk/FoodDelivery" target="_blank">Food Delivery</a></strong> – Console app with allergy & route optimization</li>
-        <li><strong><a href="https://github.com/shivaaneesk/Chrome-Extension" target="_blank">Chrome Extension</a></strong> – Save tabs like bookmarks (HTML/CSS/JS)</li>
-        <li><strong><a href="https://github.com/thirumuruganra/campus-connect" target="_blank">WAVC</a></strong> – Real-time campus event portal (React)</li>
-        <li><strong><a href="https://github.com/shivaaneesk/SarcasmDetection" target="_blank">Sarcasm Detection</a></strong> – Ensemble ML for Dravidian NLP</li>
-      </ul>
-    </section>
+    <main class="container">
 
-    <section id="skills">
-      <h2>Skills</h2>
-      <ul>
-        <li><strong>Languages:</strong> Python, Java, C, C++, JavaScript, SQL, Bash</li>
-        <li><strong>Web:</strong> React, HTML, CSS, REST APIs, JSON</li>
-        <li><strong>Tools:</strong> MySQL, Git, GitHub, VS Code, Jupyter, Figma, Linux</li>
-        <li><strong>Concepts:</strong> OOP, Multithreading, ML, NLP, Data Structures, Socket Programming</li>
-      </ul>
-    </section>
+        <section class="hero" id="home">
+            <div class="hero-content">
+                <h1 class="hero-name">SK Shivaanee</h1>
+                <p class="hero-subtitle">Computer Science Engineer & AI Enthusiast</p>
+                <p class="hero-bio">
+                    Driven by a passion for building efficient software and exploring intelligent systems, 
+                    from C++ algorithms to full-stack React applications.
+                </p>
+                <div class="hero-socials">
+                    <a href="https://www.linkedin.com/in/shivaanee-sk-0458612a5/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://github.com/shivaaneesk" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                    <a href="https://leetcode.com/shivaaneesk/" target="_blank" aria-label="LeetCode"><i class="fas fa-code"></i></a>
+                </div>
+            </div>
+        </section>
 
-    <section id="achievements">
-      <h2>Achievements</h2>
-      <ul>
-        <li>All India Rank 10 – ISC (97.5%)</li>
-        <li>SHE Scholarship under INSPIRE</li>
-        <li>Walk-in Walk-out Scholar – Full funding at SSN</li>
-        <li>300+ LeetCode problems solved; Top 4.65% contest rank</li>
-        <li>Head of IT – School MUN for 3 years</li>
-      </ul>
-    </section>
+        <section class="projects-section" id="projects">
+            <h2 class="section-title">Projects</h2>
+            <div class="project-grid">
 
-    <section id="contact">
-      <h2>Contact</h2>
-      <p><strong>Email:</strong> <a href="mailto:shivaaneesk@gmail.com">shivaaneesk@gmail.com</a></p>
-      <p><strong>Phone:</strong> <a href="tel:+919043939112">+91 90439 39112</a></p>
-      <p><strong>GitHub:</strong> <a href="https://github.com/shivaaneesk" target="_blank">shivaaneesk</a></p>
-      <p><strong>LinkedIn:</strong> <a href="https://linkedin.com/in/shivaanee-sk-0458612a5" target="_blank">shivaanee-sk</a></p>
-    </section>
-  </main>
+                <div class="project-card animate-on-scroll">
+                    <h3>ChefClaude – Recipe Generation Platform</h3>
+                    <p>Developed a responsive React web app integrating Claude API for dynamic, AI-powered recipe generation. Optimized frontend with React hooks and asynchronous API calls.</p>
+                    <div class="project-tags">
+                        <span>React</span>
+                        <span>HTML/CSS</span>
+                        <span>Claude API</span>
+                    </div>
+                </div>
 
-  <footer>
-    <p>© 2025 SK Shivaanee</p>
-  </footer>
+                <div class="project-card animate-on-scroll">
+                    <h3>WAVC – Campus Connect Platform (Ongoing)</h3>
+                    <p>Building a real-time campus engagement platform for college clubs to post and manage events. Utilizing React, HTML, and JavaScript for a dynamic UI.</p>
+                    <div class="project-tags">
+                        <span>React</span>
+                        <span>JavaScript</span>
+                        <span>HTML</span>
+                    </div>
+                </div>
+
+                <div class="project-card animate-on-scroll">
+                    <h3>Advanced Food Delivery System</h3>
+                    <p>Engineered a terminal-based system in C with an integrated allergy detection module. Utilized Dijkstra's algorithm for route optimization and Apriori for recommendations.</p>
+                    <div class="project-tags">
+                        <span>C</span>
+                        <span>Data Structures</span>
+                        <span>Algorithms</span>
+                        <span>Dijkstra's</span>
+                    </div>
+                </div>
+
+                <div class="project-card animate-on-scroll">
+                    <h3>Secure Chat Application</h3>
+                    <p>Constructed a real-time chat app with group chats using Java Sockets and multithreading. Integrated MySQL for scalable data persistence and notifications.</p>
+                    <div class="project-tags">
+                        <span>Java</span>
+                        <span>MySQL</span>
+                        <span>Socket Programming</span>
+                        <span>Multithreading</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="skills-section" id="skills">
+            <h2 class="section-title">Technical Skills</h2>
+            <div class="skill-cloud animate-on-scroll">
+                <span class="skill-tag">Python</span>
+                <span class="skill-tag">Java</span>
+                <span class="skill-tag">C</span>
+                <span class="skill-tag">C++</span>
+                <span class="skill-tag">JavaScript</span>
+                <span class="skill-tag">SQL</span>
+                <span class="skill-tag">Bash</span>
+                
+                <span class="skill-tag">React</span>
+                <span class="skill-tag">HTML</span>
+                <span class="skill-tag">CSS</span>
+                <span class="skill-tag">REST APIs</span>
+                
+                <span class="skill-tag">MySQL</span>
+                <span class="skill-tag">Git</span>
+                <span class="skill-tag">GitHub</span>
+                <span class="skill-tag">Figma</span>
+                <span class="skill-tag">Linux</span>
+                
+                <span class="skill-tag">OOP</span>
+                <span class="skill-tag">Multithreading</span>
+                <span class="skill-tag">Algorithms</span>
+                <span class="skill-tag">Data Structures</span>
+                <span class="skill-tag">Machine Learning</span>
+                <span class="skill-tag">NLP</span>
+            </div>
+        </section>
+
+        <section class="credentials-section" id="credentials">
+            <h2 class="section-title">Credentials</h2>
+            <div class="credentials-grid">
+
+                <div class="credential-card education-card animate-on-scroll">
+                    <h3><i class="fas fa-graduation-cap"></i> Education</h3>
+                    <p class="credential-title">BE, Computer Science and Engineering</p>
+                    <p class="credential-issuer">SSN College of Engineering (2023 – Present)</p>
+                    <p class="credential-detail">CGPA: 8.46/10</p>
+                    <p class="credential-detail">Recipient of Walk-in Walk-out Scholarship</p>
+                </div>
+
+                <div class="credential-card achievement-card animate-on-scroll">
+                    <h3><i class="fas fa-trophy"></i> Achievements</h3>
+                    <p class="credential-detail">Solved <strong>300+ LeetCode problems</strong> (Top 4.65% in contests)</p>
+                    <p class="credential-detail"><strong>All India Rank 10</strong> in ISC Class 12 (97.5%)</p>
+                    <p class="credential-detail">Headed school's MUN IT team for 3 years</p>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="footer-section">
+        <p>Designed & Built by SK Shivaanee</p>
+        <div class="hero-socials footer-socials">
+            <a href="https://www.linkedin.com/in/shivaanee-sk-0458612a5/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+            <a href="https://github.com/shivaaneesk" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+            <a href="https://leetcode.com/shivaaneesk/" target="_blank" aria-label="LeetCode"><i class="fas fa-code"></i></a>
+            <a href="mailto:shivaaneesk@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
