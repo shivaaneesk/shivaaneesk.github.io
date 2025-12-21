@@ -802,11 +802,3 @@ a.cert-card span {
     color: inherit; /* Uses the colors we set for the text (white/grey) */
 }
 
-/* 4. Fix the Grid Layout */
-.contributions-grid,
-.cert-grid {
-    display: grid !important;
-    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-    gap: 24px;
-    width: 100%;
-}
