@@ -409,3 +409,78 @@ section {
         flex: 0 0 300px; /* Smaller cards on mobile */
     }
 }
+
+
+/* Container Layout */
+.skills-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Centers the row (perfect for the bottom 2 items) */
+    gap: 20px;               /* Space between the blocks */
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Individual Blocks (Cards) */
+.skill-category {
+    /* Dimensions: roughly 1/3 of the width minus the gap */
+    flex: 0 0 calc(33.333% - 20px); 
+    min-width: 300px;        /* Prevents them from getting too squished on small screens */
+    
+    /* The "Container" Look */
+    background-color: #0f0f0f;      /* Dark background */
+    border: 1px solid #333;         /* Subtle border */
+    border-radius: 16px;            /* Rounded corners */
+    padding: 24px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Hover Effect for the Blocks */
+.skill-category:hover {
+    transform: translateY(-5px);
+    border-color: #555;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+}
+
+/* Headings */
+.skill-category h3 {
+    margin-top: 0;
+    margin-bottom: 16px;
+    color: #e0e0e0;
+    font-size: 1.2rem;
+    border-bottom: 1px solid #333;
+    padding-bottom: 10px;
+}
+
+/* Skill Tags Container */
+.skill-cloud {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+/* Individual Tags (Pills) */
+.skill-tag {
+    background-color: #1a1a1a;
+    color: #bbb;
+    border: 1px solid #333;
+    padding: 6px 14px;
+    border-radius: 50px;
+    font-size: 0.85rem;
+    transition: all 0.2s ease;
+    cursor: default;
+}
+
+/* Tag Hover Effect */
+.skill-tag:hover {
+    background-color: #333;
+    color: #fff;
+    border-color: #666;
+}
+
+/* Mobile Responsiveness: Stack them on small screens */
+@media (max-width: 768px) {
+    .skill-category {
+        flex: 0 0 100%; /* Full width on mobile */
+    }
+}
