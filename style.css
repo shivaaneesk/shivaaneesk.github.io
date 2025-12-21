@@ -484,3 +484,63 @@ section {
         flex: 0 0 100%; /* Full width on mobile */
     }
 }
+
+
+/* --- Certifications Grid Layout --- */
+.cert-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); 
+    gap: 20px;
+}
+
+/* --- Individual Certificate Card --- */
+.cert-card {
+    background-color: #0f0f0f;
+    border: 1px solid #333;
+    border-radius: 12px;
+    padding: 24px;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 12px;
+    
+    text-decoration: none; 
+    transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Hover Effects */
+.cert-card:hover {
+    transform: translateY(-5px);
+    border-color: #555;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.4);
+    background-color: #141414; 
+}
+
+/* --- Card Header (Provider Name Only) --- */
+.cert-header {
+    margin-bottom: 8px;
+    /* Flex is technically not needed for one item, but keeps it safe for future */
+    display: flex; 
+}
+
+.cert-provider {
+    font-size: 0.85rem;
+    color: #888;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    font-weight: 600;
+}
+
+/* --- Card Title --- */
+.cert-card h3 {
+    margin: 0;
+    color: #e0e0e0;
+    font-size: 1.1rem;
+    line-height: 1.5;
+    font-weight: 500;
+}
+
+.cert-card:hover h3 {
+    color: #fff;
+}
