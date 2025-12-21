@@ -765,3 +765,47 @@ a.contribution-card:hover {
         grid-template-columns: 1fr;
     }
 }
+
+/* 1. Reset the "Link" look for your Cards */
+a.contribution-card, 
+a.cert-card {
+    /* Stop it from acting like a text link */
+    text-decoration: none !important;
+    color: inherit !important;
+    display: flex !important; /* Forces the box shape */
+    
+    /* Re-apply the Card look */
+    background-color: #0f0f0f;
+    border: 1px solid #333;
+    border-radius: 16px;
+    padding: 30px;
+    transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+/* 2. Fix the hover state */
+a.contribution-card:hover, 
+a.cert-card:hover {
+    transform: translateY(-5px);
+    border-color: #555;
+    background-color: #141414;
+    cursor: pointer;
+}
+
+/* 3. Ensure the text inside doesn't turn blue */
+a.contribution-card h3,
+a.contribution-card p,
+a.contribution-card span,
+a.cert-card h3,
+a.cert-card span {
+    text-decoration: none !important;
+    color: inherit; /* Uses the colors we set for the text (white/grey) */
+}
+
+/* 4. Fix the Grid Layout */
+.contributions-grid,
+.cert-grid {
+    display: grid !important;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 24px;
+    width: 100%;
+}
