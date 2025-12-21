@@ -544,3 +544,123 @@ section {
 .cert-card:hover h3 {
     color: #fff;
 }
+
+/* --- Contributions Grid Layout --- */
+.contributions-grid {
+    display: grid;
+    /* Creates 2 columns that are at least 400px wide.
+       On smaller screens, it will automatically stack to 1 column. */
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 24px;
+}
+
+/* --- Individual Contribution Card --- */
+.contribution-card {
+    /* Container Look (matches your other cards) */
+    background-color: #0f0f0f;
+    border: 1px solid #333;
+    border-radius: 16px;
+    padding: 30px;
+    
+    /* Layout */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 20px;
+    
+    /* Interaction */
+    text-decoration: none; /* Removes default underline from the main link container */
+    transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Hover Effects */
+.contribution-card:hover {
+    transform: translateY(-5px);
+    border-color: #555;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.4);
+    background-color: #141414;
+}
+
+/* --- Card Header (Repo Info & Status) --- */
+.contrib-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.contribution-card h3 {
+    margin: 0 0 5px 0;
+    color: #fff;
+    font-size: 1.4rem;
+    font-weight: 600;
+}
+
+.org-handle {
+    color: #888;
+    font-size: 0.9rem;
+    font-family: monospace; /* Gives it a code-like look */
+}
+
+/* Status Badge (Styled like GitHub's merged badge) */
+.status-badge {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 12px;
+    border-radius: 50px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    border: 1px solid transparent;
+    white-space: nowrap; /* Prevents it from breaking into two lines */
+}
+
+.status-badge.merged {
+    background-color: rgba(163, 113, 247, 0.1); /* Light Purple tint */
+    color: #a371f7; /* GitHub Purple */
+    border-color: rgba(163, 113, 247, 0.2);
+}
+
+/* --- Card Description --- */
+.contrib-desc {
+    color: #a0a0a0;
+    line-height: 1.6;
+    margin: 0;
+    font-size: 0.95rem;
+    flex-grow: 1; /* Ensures description fills space, pushing the link to the bottom */
+}
+
+/* --- "View PR" Link Style --- */
+.view-pr-link {
+    display: inline-flex;
+    align-items: center;
+    color: #fff;
+    font-weight: 600;
+    font-size: 0.9rem;
+    margin-top: auto; /* Pushes it to the bottom of the card */
+}
+
+.arrow {
+    margin-left: 5px;
+    transition: transform 0.2s ease;
+}
+
+/* Animate the arrow on hover */
+.contribution-card:hover .arrow {
+    transform: translate(3px, -3px);
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .contributions-grid {
+        grid-template-columns: 1fr; /* Force 1 column on mobile */
+    }
+    
+    .contrib-header {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .status-badge {
+        align-self: flex-start; /* Aligns badge to the left on mobile */
+    }
+}
